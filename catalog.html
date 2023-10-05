@@ -29,7 +29,7 @@
           </li>
           <li class="user-navigation-item">
             <a class="user-navigation-link" href="#">
-              <span class="visually-hidden">Избранное: </span>
+              <span class="visually-hidden">Избранное:</span>
               <span class="favorites-counter">12</span>
             </a>
           </li>
@@ -61,17 +61,20 @@
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control-label">
-                  <input class="control-input" type="checkbox" name="pool" checked> Бассейн
+                  <input class="control-input" type="checkbox" name="pool" checked>
+                  Бассейн
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control-label">
-                  <input class="control-input" type="checkbox" name="parking" checked> Парковка
+                  <input class="control-input" type="checkbox" name="parking" checked>
+                  Парковка
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control-label">
-                  <input class="control-input" type="checkbox" name="wifi"> Wi-Fi
+                  <input class="control-input" type="checkbox" name="wifi">
+                  Wi-Fi
                 </label>
               </li>
             </ul>
@@ -81,12 +84,14 @@
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
                 <label class="control-label">
-                  <input class="control-input" type="radio" name="housing_type" value="hotel" checked> Гостиница
+                  <input class="control-input" type="radio" name="housing_type" value="hotel" checked>
+                  Гостиница
                 </label>
               </li>
               <li class="catalog-filter-item">
                 <label class="control-label">
-                  <input class="control-input" type="radio" name="housing_type" value="motel"> Мотель
+                  <input class="control-input" type="radio" name="housing_type" value="motel">
+                  Мотель
                 </label>
               </li>
               <li class="catalog-filter-item">
@@ -100,19 +105,19 @@
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <label class="price-selection-label">
                 <span class="price-selection-text">от</span>
-                <input class="price-selection-input" type="number" name="min_price" min="0" max="4500" value="0">
+                <input class="price-selection-input" type="number" name="min_price" min="0" max="4500" step="100" value="0">
               </label>
               <label class="price-selection-label">
                 <span class="price-selection-text">до</span>
-                <input class="price-selection-input" type="number" name="max_price" min="4500" max="9000" value="9000">
+                <input class="price-selection-input" type="number" name="max_price" min="4500" max="9000" step="100" value="9000">
               </label>
             <label>
               <span class="visually-hidden">Измените минимальную цену:</span>
-              <input type="range" name="min_price_limit" min="0" max="4500" value="0" oninput="min_price.value=min_price_limit.value">
+              <input type="range" name="min_price_limit" min="0" max="4500" step="100" value="0" oninput="min_price.value=min_price_limit.value">
             </label>
             <label>
               <span class="visually-hidden">Измените максимальную цену:</span>
-              <input type="range" name="max_price_limit" min="4500" max="9000" value="9000" oninput="max_price.value=max_price_limit.value">
+              <input type="range" name="max_price_limit" min="4500" max="9000" step="100" value="9000" oninput="max_price.value=max_price_limit.value">
             </label>
           </fieldset>
           <button type="reset">Сбросить</button>
@@ -130,17 +135,17 @@
           <ul class="layout-control-list">
             <li class="layout-control-item">
               <a href="#">
-                <span class="visually-hidden">Показать карточки</span>
+                <span class="visually-hidden">Показать карточками</span>
               </a>
             </li>
             <li class="layout-control-item">
               <a href="#">
-                <span class="visually-hidden">Показать карточки</span>
+                <span class="visually-hidden">Показать крупными блоками</span>
               </a>
             </li>
             <li class="layout-control-item">
               <a href="#">
-                <span class="visually-hidden">Показать список</span>
+                <span class="visually-hidden">Показать списком</span>
               </a>
             </li>
           </ul>
@@ -148,7 +153,7 @@
         <ul class="hotels">
           <li class="hotel">
             <h3 class="hotel-name">Amara Resort & Spa</h3>
-            <img src="#" alt="">
+            <img src="#" alt="Звёздное небо, вид из пещеры">
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 4000 ₽</span>
@@ -162,7 +167,7 @@
           </li>
           <li class="hotel">
             <h3 class="hotel-name">Villas at Poco Diablo</h3>
-            <img src="#" alt="">
+            <img src="#" alt="Радуга сквозь тучи над скалистой грядой">
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 5000 ₽</span>
@@ -176,7 +181,7 @@
           </li>
           <li class="hotel">
             <h3 class="hotel-name">Desert Quail Inn</h3>
-            <img src="#" alt="">
+            <img src="#" alt="Зеленеющий лес у подножья горы ранним утром">
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 2500 ₽</span>
@@ -190,7 +195,7 @@
           </li>
           <li class="hotel">
             <h3 class="hotel-name">GreenTree Inn</h3>
-            <img src="#" alt="">
+            <img src="#" alt="Отвесный утёс отражает лучи заходящего солнца">
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 1500 ₽</span>
@@ -229,7 +234,7 @@
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="newsletter-email">Ваш e-mail</label>
-          <input type="email" name="newsletter-email" id="newsletter-email" placeholder="Ваш e-mail">
+          <input type="email" name="newsletter-email" id="newsletter-email" placeholder="Ваш e-mail" required>
           <button type="submit">Подписаться</button>
         </form>
       </section>
@@ -237,23 +242,23 @@
     <footer class="page-footer">
       <ul class="footer-social-list">
         <li class="footer-social-item">
-          <a href="https://vk.com/htmlacademy">
+          <a href="https://vk.com/htmlacademy" target="_blank">
             <span class="visually-hidden">Vkontakte</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a href="https://t.me/htmlacademy">
+          <a href="https://t.me/htmlacademy" target="_blank">
             <span class="visually-hidden">Telegram</span>
           </a>
         </li>
         <li class="footer-social-item">
-          <a href="https://www.youtube.com/user/htmlacademyru">
+          <a href="https://www.youtube.com/user/htmlacademyru" target="_blank">
             <span class="visually-hidden">YouTube</span>
           </a>
         </li>
       </ul>
       <a href="tel:+78128121212">+7 (812) 812-12-12</a>
-      <a href="https://htmlacademy.ru/">
+      <a href="https://htmlacademy.ru/" target="_blank">
         <img src="#" alt="HTML Academy: бесплатные тренажёры по вёрстке!">
       </a>
     </footer>
