@@ -55,27 +55,21 @@
       </header>
       <section class="filters">
         <h2 class="visually-hidden">Фильтры</h2>
-        <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
+        <form class="catalog-filter-form" action="https://echo.htmlacademy.ru/" method="get">
           <fieldset class="catalog-filter-group">
             <legend class="catalog-filter-title">Инфраструктура:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control-label">
-                  <input class="control-input" type="checkbox" name="pool" checked>
-                  Бассейн
-                </label>
+                <input class="control-input" type="checkbox" name="pool" id="catalog-filter-pool" checked>
+                <label class="control-label" for="catalog-filter-pool">Бассейн</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control-label">
-                  <input class="control-input" type="checkbox" name="parking" checked>
-                  Парковка
-                </label>
+                <input class="control-input" type="checkbox" name="parking" id="catalog-filter-parking" checked>
+                <label class="control-label" for="catalog-filter-parking">Парковка</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control-label">
-                  <input class="control-input" type="checkbox" name="wifi">
-                  Wi-Fi
-                </label>
+                <input class="control-input" type="checkbox" name="wifi" id="catalog-filter-wifi">
+                <label class="control-label" for="catalog-filter-wifi">Wi-Fi</label>
               </li>
             </ul>
           </fieldset>
@@ -83,21 +77,16 @@
             <legend class="catalog-filter-title">Тип жилья:</legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control-label">
-                  <input class="control-input" type="radio" name="housing_type" value="hotel" checked>
-                  Гостиница
-                </label>
+                <input class="control-input" type="radio" name="housing_type" value="hotel" id="catalog-filter-hotel" checked>
+                <label class="control-label" for="catalog-filter-hotel">Гостиница</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control-label">
-                  <input class="control-input" type="radio" name="housing_type" value="motel">
-                  Мотель
-                </label>
+                <input class="control-input" type="radio" name="housing_type" value="motel" id="catalog-filter-motel">
+                <label class="control-label" for="catalog-filter-motel">Мотель</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control-label">
-                  <input class="control-input" type="radio" name="housing_type" value="apartments"> Апартаменты
-                </label>
+                <input class="control-input" type="radio" name="housing_type" value="apartments" id="catalog-filter-apartments">
+                <label class="control-label" for="catalog-filter-apartments">Апартаменты</label>
               </li>
             </ul>
           </fieldset>
@@ -112,11 +101,11 @@
                 <input class="price-selection-input" type="number" name="max_price" min="4500" max="9000" step="100" value="9000">
               </label>
             <label>
-              <span class="visually-hidden">Измените минимальную цену:</span>
+              <span class="visually-hidden">Установите минимальную цену:</span>
               <input type="range" name="min_price_limit" min="0" max="4500" step="100" value="0" oninput="min_price.value=min_price_limit.value">
             </label>
             <label>
-              <span class="visually-hidden">Измените максимальную цену:</span>
+              <span class="visually-hidden">Установите максимальную цену:</span>
               <input type="range" name="max_price_limit" min="4500" max="9000" step="100" value="9000" oninput="max_price.value=max_price_limit.value">
             </label>
           </fieldset>
@@ -153,7 +142,7 @@
         <ul class="hotels">
           <li class="hotel">
             <h3 class="hotel-name">Amara Resort & Spa</h3>
-            <img src="#" alt="Звёздное небо, вид из пещеры">
+            <img src="#" alt="Звёздное небо, вид из пещеры.">
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 4000 ₽</span>
@@ -167,7 +156,7 @@
           </li>
           <li class="hotel">
             <h3 class="hotel-name">Villas at Poco Diablo</h3>
-            <img src="#" alt="Радуга сквозь тучи над скалистой грядой">
+            <img src="#" alt="Радуга сквозь тучи над скалистой грядой.">
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 5000 ₽</span>
@@ -181,7 +170,7 @@
           </li>
           <li class="hotel">
             <h3 class="hotel-name">Desert Quail Inn</h3>
-            <img src="#" alt="Зеленеющий лес у подножья горы ранним утром">
+            <img src="#" alt="Зеленеющий лес у подножья горы ранним утром.">
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 2500 ₽</span>
@@ -195,7 +184,7 @@
           </li>
           <li class="hotel">
             <h3 class="hotel-name">GreenTree Inn</h3>
-            <img src="#" alt="Отвесный утёс отражает лучи заходящего солнца">
+            <img src="#" alt="Отвесный утёс отражает лучи заходящего солнца.">
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 1500 ₽</span>
