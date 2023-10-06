@@ -8,7 +8,7 @@
     <header class="page-header">
       <nav class="navigation">
         <a class="page-header-logo" href="index.html">
-          <img src="#" alt="Логотип сайта Седоны.">
+          <img src="#" alt="Добро пожаловать в Седону.">
         </a>
         <ul class="navigation-list">
           <li class="navigation-item">
@@ -94,19 +94,19 @@
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <label class="price-selection-label">
                 <span class="price-selection-text">от</span>
-                <input class="price-selection-input" type="number" name="min_price" min="0" max="4500" step="100" value="0">
+                <input class="price-selection-input" type="number" name="minprice" min="0" max="4500" step="100" value="0">
               </label>
               <label class="price-selection-label">
                 <span class="price-selection-text">до</span>
-                <input class="price-selection-input" type="number" name="max_price" min="4500" max="9000" step="100" value="9000">
+                <input class="price-selection-input" type="number" name="maxprice" min="4500" max="9000" step="100" value="9000">
               </label>
             <label>
               <span class="visually-hidden">Установите минимальную цену:</span>
-              <input type="range" name="min_price_limit" min="0" max="4500" step="100" value="0" oninput="min_price.value=min_price_limit.value">
+              <input type="range" name="minpricelimit" min="0" max="4500" step="100" value="0" oninput="minprice.value=minpricelimit.value">
             </label>
             <label>
               <span class="visually-hidden">Установите максимальную цену:</span>
-              <input type="range" name="max_price_limit" min="4500" max="9000" step="100" value="9000" oninput="max_price.value=max_price_limit.value">
+              <input type="range" name="maxpricelimit" min="4500" max="9000" step="100" value="9000" oninput="maxprice.value=maxpricelimit.value">
             </label>
           </fieldset>
           <button type="reset">Сбросить</button>
@@ -147,8 +147,8 @@
               <span>Гостиница</span>
               <span>От 4000 ₽</span>
             </p>
-            <a href="#">подробнее</a>
-            <a href="#">в избранное</a>
+            <a href="#">Подробнее</a>
+            <a href="#">В избранное</a>
             <p class="stars-number">
               <span class="visually-hidden">Количество звёзд: 4</span>
             </p>
@@ -161,8 +161,8 @@
               <span>Гостиница</span>
               <span>От 5000 ₽</span>
             </p>
-            <a href="#">подробнее</a>
-            <a href="#">в избранном</a>
+            <a href="#">Подробнее</a>
+            <a href="#">В избранном</a>
             <p class="stars-number">
               <span class="visually-hidden">Количество звёзд: 4</span>
             </p>
@@ -175,8 +175,8 @@
               <span>Гостиница</span>
               <span>От 2500 ₽</span>
             </p>
-            <a href="#">подробнее</a>
-            <a href="#">в избранное</a>
+            <a href="#">Подробнее</a>
+            <a href="#">В избранное</a>
             <p class="stars-number">
               <span class="visually-hidden">Количество звёзд: 3</span>
             </p>
@@ -189,8 +189,8 @@
               <span>Гостиница</span>
               <span>От 1500 ₽</span>
             </p>
-            <a href="#">подробнее</a>
-            <a href="#">в избранное</a>
+            <a href="#">Подробнее</a>
+            <a href="#">В избранное</a>
             <p class="stars-number">
               <span class="visually-hidden">Количество звёзд: 2</span>
             </p>
@@ -223,7 +223,7 @@
         <p>Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="newsletter-email">Ваш e-mail</label>
-          <input type="email" name="newsletter-email" id="newsletter-email" placeholder="Ваш e-mail" required>
+          <input type="email" name="newsletter-email" placeholder="Ваш e-mail"  id="newsletter-email" required>
           <button type="submit">Подписаться</button>
         </form>
       </section>
