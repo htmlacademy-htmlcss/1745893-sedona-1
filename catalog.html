@@ -101,8 +101,12 @@
                 <input class="price-selection-input" type="number" name="max-price" min="0" max="9000" step="100" value="9000">
               </label>
             <div class="price-scale">
-              <button class="min-price-setting-slider" type="button"></button>
-              <button class="max-price-setting-slider" type="button"></button>
+              <button class="min-price-setting-slider" type="button">
+                <span class="visually-hidden">Установка минимальной цены</span>
+              </button>
+              <button class="max-price-setting-slider" type="button">
+                <span class="visually-hidden">Установка максимальной цены</span>
+              </button>
             </div>
           </fieldset>
           <button type="submit">Применить</button>
