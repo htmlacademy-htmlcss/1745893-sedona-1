@@ -39,7 +39,7 @@
         </ul>
       </nav>
     </header>
-    <main class="main-inner">
+    <main class="main-container">
       <header class="inner-header">
         <h1>Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
@@ -94,23 +94,19 @@
             <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <label class="price-selection-label">
                 <span class="price-selection-text">от</span>
-                <input class="price-selection-input" type="number" name="minprice" min="0" max="9000" step="100" value="0">
+                <input class="price-selection-input" type="number" name="min-price" min="0" max="9000" step="100" value="0">
               </label>
               <label class="price-selection-label">
                 <span class="price-selection-text">до</span>
-                <input class="price-selection-input" type="number" name="maxprice" min="0" max="9000" step="100" value="9000">
+                <input class="price-selection-input" type="number" name="max-price" min="0" max="9000" step="100" value="9000">
               </label>
-            <label>
-              <span class="visually-hidden">Установите минимальную цену:</span>
-              <input type="range" name="minpricelimit" min="0" max="9000" step="100" value="0" oninput="minprice.value=minpricelimit.value">
-            </label>
-            <label>
-              <span class="visually-hidden">Установите максимальную цену:</span>
-              <input type="range" name="maxpricelimit" min="0" max="9000" step="100" value="9000" oninput="maxprice.value=maxpricelimit.value">
-            </label>
+            <div class="price-scale">
+              <button class="min-price-setting-slider" type="button"></button>
+              <button class="max-price-setting-slider" type="button"></button>
+            </div>
           </fieldset>
-          <button type="reset">Сбросить</button>
           <button type="submit">Применить</button>
+          <button type="reset">Сбросить</button>
         </form>
       </section>
       <section class="catalog">
@@ -120,6 +116,9 @@
           </p>
           <select class="sorting-control" aria-label="Сортировка">
             <option value="cheap">Сначала дешевые</option>
+            <option value="expensive">Сначала дорогие</option>
+            <option value="high-rating">Сначала с высоким рейтингом</option>
+            <option value="popular">Сначала популярные</option>
           </select>
           <ul class="layout-control-list">
             <li class="layout-control-item">
@@ -141,8 +140,10 @@
         </div>
         <ul class="hotels">
           <li class="hotel">
-            <h3 class="hotel-name">Amara Resort & Spa</h3>
-            <img src="#" alt="Звёздное небо, вид из пещеры.">
+            <a href="#">
+              <h3 class="hotel-name">Amara Resort & Spa</h3>
+              <img src="#" alt="Звёздное небо, вид из пещеры.">
+            </a>
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 4000 ₽</span>
@@ -155,8 +156,10 @@
             <p class="rating-assessment">Рейтинг: 8,5</p>
           </li>
           <li class="hotel">
-            <h3 class="hotel-name">Villas at Poco Diablo</h3>
-            <img src="#" alt="Радуга сквозь тучи над скалистой грядой.">
+            <a href="#">
+              <h3 class="hotel-name">Villas at Poco Diablo</h3>
+              <img src="#" alt="Радуга сквозь тучи над скалистой грядой.">
+            </a>
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 5000 ₽</span>
@@ -169,8 +172,10 @@
             <p class="rating-assessment">Рейтинг: 9,2</p>
           </li>
           <li class="hotel">
-            <h3 class="hotel-name">Desert Quail Inn</h3>
-            <img src="#" alt="Зеленеющий лес у подножья горы ранним утром.">
+            <a href="#">
+              <h3 class="hotel-name">Desert Quail Inn</h3>
+              <img src="#" alt="Зеленеющий лес у подножья горы ранним утром.">
+            </a>
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 2500 ₽</span>
@@ -183,8 +188,10 @@
             <p class="rating-assessment">Рейтинг: 6,9</p>
           </li>
           <li class="hotel">
-            <h3 class="hotel-name">GreenTree Inn</h3>
-            <img src="#" alt="Отвесный утёс отражает лучи заходящего солнца.">
+            <a href="#">
+              <h3 class="hotel-name">GreenTree Inn</h3>
+              <img src="#" alt="Отвесный утёс отражает лучи заходящего солнца.">
+            </a>
             <p class="hotel-info">
               <span>Гостиница</span>
               <span>От 1500 ₽</span>
