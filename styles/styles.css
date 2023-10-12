@@ -22,6 +22,19 @@ body {
   background-color: #f2f2f2;
 }
 
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #756157;
+  border-radius: 4px;
+}
+
 .page-wrapper {
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -36,8 +49,7 @@ body {
   text-decoration: none;
 }
 
-.hero {
-  background-color: #f2f2f2;
+.intro-container {
   background-image: url("../images/covering-bg/hero-bg.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -55,7 +67,7 @@ body {
   text-transform: uppercase;
 }
 
-.advantages-list {
+.advantages-item {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -99,6 +111,11 @@ body {
   text-transform: uppercase;
 }
 
+.search-link {
+  font-size: 20px;
+  line-height: 36px;
+}
+
 .newsletter {
   text-align: center;
 }
@@ -119,6 +136,14 @@ body {
 
 .newsletter-index .newsletter-title {
   color: inherit;
+}
+
+.button-submit {
+  font-size: 20px;
+  line-height: 36px;
+  background-color: #82b3d3;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .catalog-top-container {
@@ -151,6 +176,10 @@ body {
   line-height: 23px;
 }
 
+.button-reset {
+  background-color: rgba(0, 0, 0, 0);
+}
+
 .searching-results-notice {
   font-size: 30px;
   line-height: 36px;
@@ -179,6 +208,14 @@ body {
   line-height: 21px;
 }
 
+.add-favorites {
+  background-color: #82b3d3;
+}
+
+.added-favorites {
+  background-color: #7db54f;
+}
+
 .rating-assessment {
   font-size: 16px;
   line-height: 20px;
@@ -186,6 +223,28 @@ body {
   text-transform: uppercase;
   background-color: #f2f2f2;
   border-radius: 4px;
+}
+
+.pagination-link {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #82b3d3;
+  border-radius: 4px;
+}
+
+.pagination-link-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.pagination-show-more {
+  color: #000000;
+  background-color: #ffffff;
 }
 
 .footer-phone {
