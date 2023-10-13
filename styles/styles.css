@@ -35,7 +35,7 @@ body {
   border-radius: 4px;
 }
 
-.page-wrapper {
+.page-container {
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
@@ -49,13 +49,14 @@ body {
   text-decoration: none;
 }
 
-.intro-container {
+.hero {
+  background-color: #298b4a;
   background-image: url("../images/covering-bg/hero-bg.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
 
-.advantages {
+.advantages p {
   text-align: center;
 }
 
@@ -71,9 +72,23 @@ body {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+.advantages-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item.advantages-item-illustrated {
+  color: #ffffff;
+  background-color: #82b3d3;
+}
+
+.services-item:nth-child(even) {
+  background-color: #ffffff;
+}
+
 .advantages-title {
   font-size: 24px;
   line-height: 28px;
+  text-align: center;
   color: #000000;
   text-transform: uppercase;
 }
@@ -83,21 +98,8 @@ body {
   line-height: 21px;
 }
 
-.background-blue {
-  color: #ffffff;
-  background-color: #82b3d3;
-}
-
-.background-blue .advantages-title {
+.advantages-item-illustrated .advantages-title {
   color: inherit;
-}
-
-.background-lightblue {
-  background-color: rgba(131, 179, 211, 0.2);
-}
-
-.background-white {
-  background-color: #ffffff;
 }
 
 .search {
@@ -122,6 +124,7 @@ body {
 
 .newsletter-index {
   color: #ffffff;
+  background-color: #82b3d3;
   background-image: url("../images/covering-bg/newsletter-bg.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -138,17 +141,31 @@ body {
   color: inherit;
 }
 
+.newsletter input {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #f2f2f2;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
 .button-submit {
+  background-color: #82b3d3;
+}
+
+.newsletter .button-submit {
   font-size: 20px;
   line-height: 36px;
-  background-color: #82b3d3;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.catalog-top-container {
+.catalog-main-top-container {
   color: #ffffff;
-  background-image: url("../images/covering-bg/catalog-top-container-bg.jpg");
+  background-color: #82b3d3;
+  background-image: url("../images/covering-bg/catalog-main-top-container-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -176,8 +193,21 @@ body {
   line-height: 23px;
 }
 
+.price-selection-label {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #f2f2f2;
+}
+
+.price-selection-input {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  background-color: #f2f2f2;
+}
+
 .button-reset {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
 }
 
 .searching-results-notice {
@@ -243,8 +273,13 @@ body {
 }
 
 .pagination-show-more {
+  font-size: 22px;
+  line-height: 26px;
   color: #000000;
+  text-align: center;
+  text-decoration: none;
   background-color: #ffffff;
+  border-radius: 4px;
 }
 
 .footer-phone {
