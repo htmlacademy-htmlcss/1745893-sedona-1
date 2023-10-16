@@ -96,7 +96,6 @@ body {
 }
 
 .hero {
-  margin-bottom: 69px;
   padding-top: 51px;
   padding-bottom: 82px;
   background-color: #298b4a;
@@ -112,7 +111,7 @@ body {
 }
 
 .advantages {
-  margin-bottom: 96px;
+  padding-top: 69px;
 }
 
 .advantages p {
@@ -132,6 +131,7 @@ body {
 }
 
 .advantages-tagline {
+  margin-top: 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -189,13 +189,17 @@ body {
 }
 
 .search {
-  width: 592px;
-  margin: 0 auto;
-  margin-bottom: 96px;
+  padding: 96px 0;
   text-align: center;
 }
 
+.search-content-wrapper {
+  width: 592px;
+  margin: 0 auto;
+}
+
 .search-title {
+  margin-top: 0;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
@@ -227,6 +231,7 @@ body {
 }
 
 .newsletter-title {
+  margin-top: 0;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
