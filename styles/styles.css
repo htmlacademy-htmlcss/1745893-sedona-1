@@ -119,13 +119,13 @@ body {
 }
 
 .advantages-text-wrapper:first-of-type {
-  width: 651px;
+  width: 652px;
   margin: 0 auto;
   margin-bottom: 90px;
 }
 
 .advantages-text-wrapper:nth-of-type(2) {
-  width: 505px;
+  width: 506px;
   margin: 0 auto;
   margin-bottom: 64px;
 }
@@ -313,7 +313,7 @@ body {
 }
 
 .filter-column-right {
-  width: 549px;
+  width: 550px;
 }
 
 .catalog-filter-group {
