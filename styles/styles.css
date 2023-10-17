@@ -264,7 +264,6 @@ body {
 }
 
 .catalog-main-top-container {
-  margin-bottom: 50px;
   padding: 70px;
   padding-top: 35px;
   color: #ffffff;
@@ -286,14 +285,15 @@ body {
 }
 
 .breadcrumbs-list {
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .breadcrumbs-link {
-  font-size: 16px;
-  line-height: 21px;
   color: inherit;
   text-decoration: none;
 }
@@ -346,6 +346,7 @@ body {
 
 .price-selection-group {
   width: 288px;
+  outline: 1px solid #ffffff; /*Устанавливает визуальную границу элемента*/
 }
 
 .price-selection-label {
@@ -370,11 +371,18 @@ body {
 }
 
 .catalog {
-  padding: 0 70px;
-  margin-bottom: 60px;
+  padding: 50px 70px 60px;
+}
+
+.catalog-inner-container {
+  display: flex;
+  margin-bottom: 40px;
 }
 
 .searching-results-notice {
+  width: 340px;
+  margin: 0;
+  margin-right: auto;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -382,7 +390,37 @@ body {
   text-transform: uppercase;
 }
 
+.sorting-control {
+  box-sizing: border-box;
+  width: 292px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.layout-control-list {
+  width: 160px;
+  margin: 0;
+  margin-left: 70px;
+  padding: 0;
+  list-style: none;
+  outline: 1px solid #ff6347;
+}
+
+.hotels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  padding-bottom: 40px;
+  list-style: none;
+  border-bottom: 1px solid #e6e6e6;
+}
+
 .hotel {
+  width: 298px;
+  padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
@@ -417,6 +455,14 @@ body {
   text-transform: uppercase;
   background-color: #f2f2f2;
   border-radius: 4px;
+}
+
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .pagination-link {
@@ -458,6 +504,7 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  outline: 1px solid #ff6347;
 }
 
 .footer-phone {
@@ -467,4 +514,8 @@ body {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.htmlacademy-logo {
+  width: 115px;
 }
