@@ -51,7 +51,10 @@ body {
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
   width: 1200px;
+  min-height: 100vh;
   margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
@@ -93,6 +96,10 @@ body {
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .hero {
