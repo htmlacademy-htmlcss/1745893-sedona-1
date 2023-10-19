@@ -103,6 +103,7 @@ body {
 }
 
 .hero {
+  padding: 0 70px;
   padding-top: 51px;
   padding-bottom: 82px;
   background-color: #298b4a;
@@ -115,7 +116,6 @@ body {
 .hero-text-invitation {
   display: block;
   margin: 0 auto;
-  padding: 0 70px;
 }
 
 .advantages {
