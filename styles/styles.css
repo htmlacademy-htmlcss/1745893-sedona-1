@@ -15,11 +15,25 @@
 }
 
 body {
+  margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
   color: #333333;
   background-color: #f2f2f2;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .button {
@@ -36,11 +50,45 @@ body {
 }
 
 .page-container {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  min-height: 100vh;
+  margin: 0 auto;
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
-.navigation-link {
+.page-header {
+  padding: 0 70px;
+}
+
+.navigation {
+  display: flex;
+}
+
+.page-header-logo {
+  width: 140px;
+  height: 64px;
+  margin-right: 28px;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-navigation {
+  width: 470px;
+}
+
+.user-navigation {
+  width: 320px;
+  margin-left: auto;
+}
+
+.site-navigation-link {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -50,18 +98,48 @@ body {
   text-decoration: none;
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 .hero {
+  padding: 0 70px;
+  padding-top: 51px;
+  padding-bottom: 82px;
   background-color: #298b4a;
-  background-image: url("../images/covering-bg/hero-bg.jpg");
+  background-image: url("../images/covering-bg/hero-decoration-border.svg"), url("../images/covering-bg/hero-bg.jpg");
+  background-position: bottom, center;
   background-size: 100% auto;
   background-repeat: no-repeat;
+}
+
+.hero-text-invitation {
+  display: block;
+  margin: 0 auto;
+}
+
+.advantages {
+  padding-top: 69px;
 }
 
 .advantages p {
   text-align: center;
 }
 
+.advantages-text-wrapper {
+  width: 652px;
+  margin: 0 auto;
+  margin-bottom: 90px;
+  padding: 0 70px;
+}
+
+.services-advantages-text {
+  width: 506px;
+  margin-bottom: 64px;
+}
+
 .advantages-tagline {
+  margin-top: 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -69,7 +147,21 @@ body {
   text-transform: uppercase;
 }
 
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 64px;
+  padding: 0;
+  list-style: none;
+}
+
+.services-list {
+  margin-bottom: 0;
+}
+
 .advantages-item {
+  width: 400px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -77,13 +169,14 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item.advantages-item-illustrated {
-  color: #ffffff;
-  background-color: #82b3d3;
-}
-
 .services-item:nth-child(even) {
   background-color: #ffffff;
+}
+
+.advantages-item.advantages-item-illustrated {
+  width: 100%;
+  color: #ffffff;
+  background-color: #82b3d3;
 }
 
 .advantages-title {
@@ -104,10 +197,18 @@ body {
 }
 
 .search {
+  padding: 96px 0;
   text-align: center;
 }
 
+.search-content-wrapper {
+  width: 592px;
+  margin: 0 auto;
+  padding: 0 70px;
+}
+
 .search-title {
+  margin-top: 0;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
@@ -120,7 +221,15 @@ body {
 }
 
 .newsletter {
+  padding-top: 96px;
+  padding-bottom: 104px;
   text-align: center;
+}
+
+.newsletter-content-wrapper {
+  width: 684px;
+  margin: 0 auto;
+  padding: 0 70px;
 }
 
 .newsletter-index {
@@ -132,6 +241,7 @@ body {
 }
 
 .newsletter-title {
+  margin-top: 0;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
@@ -164,6 +274,8 @@ body {
 }
 
 .catalog-main-top-container {
+  padding: 70px;
+  padding-top: 35px;
   color: #ffffff;
   background-color: #82b3d3;
   background-image: url("../images/covering-bg/catalog-main-top-container-bg.jpg");
@@ -171,19 +283,67 @@ body {
   background-repeat: no-repeat;
 }
 
+.inner-header {
+  margin-bottom: 40px;
+}
+
 .inner-header-title {
+  margin-top: 0;
+  margin-bottom: 8px;
   font-size: 60px;
   line-height: 78px;
 }
 
-.breadcrumbs-link {
+.breadcrumbs-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   font-size: 16px;
   line-height: 21px;
+}
+
+.breadcrumbs-link {
   color: inherit;
   text-decoration: none;
 }
 
+.catalog-filter-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-column-left {
+  width: 370px;
+}
+
+.filter-column-right {
+  width: 550px;
+}
+
+.catalog-filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter-column-left .catalog-filter-group {
+  width: 150px;
+}
+
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .catalog-filter-title {
+  padding: 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -192,6 +352,11 @@ body {
 .control-label {
   font-size: 18px;
   line-height: 23px;
+}
+
+.price-selection-group {
+  width: 288px;
+  outline: 1px solid #ffffff;
 }
 
 .price-selection-label {
@@ -207,11 +372,27 @@ body {
   background-color: #f2f2f2;
 }
 
+.buttons-wrapper {
+  width: 191px;
+}
+
 .button-reset {
   background-color: transparent;
 }
 
+.catalog {
+  padding: 50px 70px 60px;
+}
+
+.catalog-inner-container {
+  display: flex;
+  margin-bottom: 40px;
+}
+
 .searching-results-notice {
+  width: 340px;
+  margin: 0;
+  margin-right: auto;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -219,7 +400,37 @@ body {
   text-transform: uppercase;
 }
 
+.sorting-control {
+  box-sizing: border-box;
+  width: 292px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.layout-control-list {
+  width: 160px;
+  margin: 0;
+  margin-left: 70px;
+  padding: 0;
+  list-style: none;
+  outline: 1px solid #ff6347;
+}
+
+.hotels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  padding-bottom: 40px;
+  list-style: none;
+  border-bottom: 1px solid #e6e6e6;
+}
+
 .hotel {
+  width: 298px;
+  padding: 20px;
   border: 1px solid #e6e6e6;
   border-radius: 4px;
 }
@@ -256,6 +467,14 @@ body {
   border-radius: 4px;
 }
 
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .pagination-link {
   font-size: 20px;
   line-height: 36px;
@@ -283,6 +502,21 @@ body {
   border-radius: 4px;
 }
 
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 70px;
+  padding-bottom: 30px;
+}
+
+.footer-social-list {
+  width: 142px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  outline: 1px solid #ff6347;
+}
+
 .footer-phone {
   font-size: 40px;
   line-height: 40px;
@@ -290,4 +524,8 @@ body {
   color: #000000;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.htmlacademy-logo {
+  width: 115px;
 }
