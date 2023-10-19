@@ -15,7 +15,6 @@
 }
 
 body {
-  min-width: 1280px;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
@@ -70,6 +69,7 @@ body {
 
 .page-header-logo {
   width: 140px;
+  height: 64px;
   margin-right: 28px;
 }
 
@@ -80,11 +80,11 @@ body {
 }
 
 .site-navigation {
-  width: 340px;
+  width: 470px;
 }
 
 .user-navigation {
-  width: 268px;
+  width: 320px;
   margin-left: auto;
 }
 
@@ -103,6 +103,7 @@ body {
 }
 
 .hero {
+  padding: 0 70px;
   padding-top: 51px;
   padding-bottom: 82px;
   background-color: #298b4a;
@@ -125,15 +126,15 @@ body {
   text-align: center;
 }
 
-.advantages-text-wrapper:first-of-type {
+.advantages-text-wrapper {
   width: 652px;
   margin: 0 auto;
   margin-bottom: 90px;
+  padding: 0 70px;
 }
 
-.advantages-text-wrapper:nth-of-type(2) {
+.services-advantages-text {
   width: 506px;
-  margin: 0 auto;
   margin-bottom: 64px;
 }
 
@@ -203,6 +204,7 @@ body {
 .search-content-wrapper {
   width: 592px;
   margin: 0 auto;
+  padding: 0 70px;
 }
 
 .search-title {
@@ -227,6 +229,7 @@ body {
 .newsletter-content-wrapper {
   width: 684px;
   margin: 0 auto;
+  padding: 0 70px;
 }
 
 .newsletter-index {
@@ -353,7 +356,7 @@ body {
 
 .price-selection-group {
   width: 288px;
-  outline: 1px solid #ffffff; /*Устанавливает визуальную границу элемента*/
+  outline: 1px solid #ffffff;
 }
 
 .price-selection-label {
