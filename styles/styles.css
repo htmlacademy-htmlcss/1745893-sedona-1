@@ -37,7 +37,6 @@ body {
 }
 
 .button {
-  padding: 8px 10px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -88,7 +87,7 @@ body {
 }
 
 .site-navigation {
-  width: 470px;
+  max-width: 470px;
 }
 
 .user-navigation {
@@ -113,7 +112,14 @@ body {
   display: block;
 }
 
-.user-navigation-link.button {
+.user-navigation .button-icon {
+  width: 44px;
+  height: 64px;
+  outline: 1px solid #ff6347;
+  outline-offset: -1px;
+}
+
+.user-navigation .button {
   margin-left: 20px;
 }
 
@@ -211,8 +217,10 @@ body {
   justify-content: center;
   align-items: center;
   row-gap: 30px;
+  box-sizing: border-box;
   width: 100%;
   min-height: 385px;
+  padding: 70px 0;
 }
 
 .advantages-image {
