@@ -112,14 +112,14 @@ body {
   display: block;
 }
 
-.user-navigation .button-icon {
+.user-navigation-link.icon {
   width: 44px;
   height: 64px;
   outline: 1px solid #ff6347;
   outline-offset: -1px;
 }
 
-.user-navigation .button {
+.user-navigation-link.button {
   margin-left: 20px;
 }
 
@@ -148,19 +148,19 @@ body {
   text-align: center;
 }
 
-.advantages-tagline-wrapper {
+.advantages-slogan-content {
   width: 652px;
   margin: 0 auto;
   margin-bottom: 90px;
   padding: 0 70px;
 }
 
-.services-tagline-wrapper {
+.services-slogan-content {
   width: 506px;
   margin-bottom: 64px;
 }
 
-.advantages-tagline {
+.slogan-title {
   margin-top: 0;
   margin-bottom: 25px;
   font-size: 30px;
@@ -170,11 +170,11 @@ body {
   text-transform: uppercase;
 }
 
-.services-tagline-wrapper .advantages-tagline {
+.services-slogan-content .slogan-title {
   margin-bottom: 20px;
 }
 
-.tagline-after {
+.slogan-text {
   margin: 0;
 }
 
@@ -277,7 +277,6 @@ body {
 }
 
 .search-link {
-  display: block;
   font-size: 20px;
   line-height: 36px;
 }
@@ -454,6 +453,7 @@ body {
 
 .catalog-inner-container {
   display: flex;
+  align-items: center;
   margin-bottom: 40px;
 }
 
@@ -476,12 +476,22 @@ body {
 }
 
 .layout-control-list {
+  display: flex;
+  gap: 8px;
   width: 160px;
   margin: 0;
   margin-left: 70px;
   padding: 0;
   list-style: none;
-  outline: 1px solid #ff6347;
+}
+
+.layout-control-link {
+  display: block;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
 }
 
 .hotels {
@@ -611,11 +621,20 @@ body {
 }
 
 .footer-social-list {
-  width: 142px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 240px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.footer-social-link {
+  display: block;
+  width: 48px;
+  height: 40px;
   outline: 1px solid #ff6347;
+  outline-offset: -1px;
 }
 
 .footer-phone {
