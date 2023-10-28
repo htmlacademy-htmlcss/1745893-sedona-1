@@ -112,11 +112,14 @@ body {
   display: block;
 }
 
-.user-navigation-link.icon {
+.user-navigation-link-search {
   width: 44px;
   height: 64px;
-  outline: 1px solid #ff6347;
-  outline-offset: -1px;
+}
+
+.user-navigation-link-favorite {
+  width: 44px;
+  height: 64px;
 }
 
 .user-navigation-link.button {
@@ -279,7 +282,7 @@ body {
   max-width: 100%;
   height: 100%;
   object-fit: cover;
-  vertical-align: middle;
+  display: block;
 }
 
 .advantages-title {
@@ -418,6 +421,7 @@ body {
 
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -532,6 +536,7 @@ body {
 
 .layout-control-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   width: 160px;
   margin: 0;
@@ -611,7 +616,7 @@ body {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   padding: 12px 18px;
   font-size: 20px;
@@ -656,11 +661,10 @@ body {
   display: block;
   width: 48px;
   height: 40px;
-  outline: 1px solid #ff6347;
-  outline-offset: -1px;
 }
 
 .footer-phone {
+  max-width: 340px;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
