@@ -68,27 +68,37 @@ body {
 }
 
 .page-header-logo {
+  position: relative;
   width: 140px;
   height: 64px;
   margin-right: 28px;
 }
 
+.page-header-logo img {
+  position: absolute;
+}
+
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .site-navigation {
-  width: 470px;
+  max-width: 470px;
 }
 
 .user-navigation {
-  width: 320px;
+  align-items: center;
+  max-width: 320px;
   margin-left: auto;
 }
 
 .site-navigation-link {
+  display: block;
+  padding: 20px 16px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -96,6 +106,24 @@ body {
   color: #000000;
   background-color: #ffffff;
   text-decoration: none;
+}
+
+.user-navigation-link {
+  display: block;
+}
+
+.user-navigation-link-search {
+  width: 44px;
+  height: 64px;
+}
+
+.user-navigation-link-favorite {
+  width: 44px;
+  height: 64px;
+}
+
+.user-navigation-link.button {
+  margin-left: 20px;
 }
 
 .main-container {
@@ -120,31 +148,37 @@ body {
 
 .advantages {
   padding-top: 69px;
-}
-
-.advantages p {
   text-align: center;
 }
 
-.advantages-text-wrapper {
+.advantages-slogan-content {
   width: 652px;
   margin: 0 auto;
   margin-bottom: 90px;
   padding: 0 70px;
 }
 
-.services-advantages-text {
+.services-slogan-content {
   width: 506px;
   margin-bottom: 64px;
 }
 
-.advantages-tagline {
+.slogan-title {
   margin-top: 0;
+  margin-bottom: 25px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.services-slogan-content .slogan-title {
+  margin-bottom: 20px;
+}
+
+.slogan-text {
+  margin: 0;
 }
 
 .advantages-list {
@@ -161,7 +195,9 @@ body {
 }
 
 .advantages-item {
+  box-sizing: border-box;
   width: 400px;
+  min-height: 385px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
@@ -174,26 +210,103 @@ body {
 }
 
 .advantages-item.advantages-item-illustrated {
+  display: flex;
   width: 100%;
   color: #ffffff;
   background-color: #82b3d3;
 }
 
+.flow-reverse {
+  flex-direction: row-reverse;
+}
+
+.services-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 80px;
+}
+
+.advantages-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  box-sizing: border-box;
+  width: 400px;
+  padding: 112px 80px;
+}
+
+.advantages-item-illustrated .advantages-text-wrapper {
+  padding: 102px 80px;
+}
+
+.advantages-text-wrapper::before {
+  content: "";
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.30);
+}
+
+.advantages-item-illustrated .advantages-text-wrapper::before {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.services-item::before {
+  content: "";
+  width: 75px;
+  height: 72px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.housing::before {
+  background-image: url("../images/icons/services-housing.svg");
+}
+
+.food::before {
+  background-image: url("../images/icons/services-food.svg");
+}
+
+.souvenirs::before {
+  background-image: url("../images/icons/services-souvenirs.svg");
+}
+
+.advantages-image-wrapper {
+  width: 800px;
+}
+
+.advantages-image {
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .advantages-title {
+  order: -1;
+  width: 175px;
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
-  text-align: center;
   color: #000000;
   text-transform: uppercase;
 }
 
-.advantages-description {
-  font-size: 18px;
-  line-height: 21px;
-}
-
 .advantages-item-illustrated .advantages-title {
   color: inherit;
+}
+
+.services-item .advantages-title {
+  order: initial;
+}
+
+.advantages-description {
+  margin: 0;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .search {
@@ -209,10 +322,16 @@ body {
 
 .search-title {
   margin-top: 0;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
+}
+
+.search-text {
+  margin-top: 0;
+  margin-bottom: 54px;
 }
 
 .search-link {
@@ -242,6 +361,7 @@ body {
 
 .newsletter-title {
   margin-top: 0;
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 36px;
   color: #000000;
@@ -250,6 +370,11 @@ body {
 
 .newsletter-index .newsletter-title {
   color: inherit;
+}
+
+.newsletter-text {
+  margin-top: 0;
+  margin-bottom: 54px;
 }
 
 .newsletter input {
@@ -296,6 +421,7 @@ body {
 
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -386,11 +512,12 @@ body {
 
 .catalog-inner-container {
   display: flex;
+  align-items: center;
   margin-bottom: 40px;
 }
 
 .searching-results-notice {
-  width: 340px;
+  max-width: 370px;
   margin: 0;
   margin-right: auto;
   font-size: 30px;
@@ -408,12 +535,23 @@ body {
 }
 
 .layout-control-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   width: 160px;
   margin: 0;
   margin-left: 70px;
   padding: 0;
   list-style: none;
-  outline: 1px solid #ff6347;
+}
+
+.layout-control-link {
+  display: block;
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
 }
 
 .hotels {
@@ -476,6 +614,11 @@ body {
 }
 
 .pagination-link {
+  display: block;
+  box-sizing: border-box;
+  min-width: 60px;
+  height: 60px;
+  padding: 12px 18px;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
@@ -493,31 +636,35 @@ body {
 }
 
 .pagination-show-more {
-  font-size: 22px;
-  line-height: 26px;
   color: #000000;
-  text-align: center;
-  text-decoration: none;
   background-color: #ffffff;
-  border-radius: 4px;
 }
 
 .page-footer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 40px 70px;
   padding-bottom: 30px;
 }
 
 .footer-social-list {
-  width: 142px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 240px;
   margin: 0;
   padding: 0;
   list-style: none;
-  outline: 1px solid #ff6347;
+}
+
+.footer-social-link {
+  display: block;
+  width: 48px;
+  height: 40px;
 }
 
 .footer-phone {
+  max-width: 340px;
   font-size: 40px;
   line-height: 40px;
   text-align: center;
@@ -528,4 +675,5 @@ body {
 
 .htmlacademy-logo {
   width: 115px;
+  height: 34px;
 }
