@@ -581,6 +581,7 @@ body {
 .hotel {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr repeat(3, auto);
   column-gap: 20px;
   row-gap: 16px;
   padding: 20px;
@@ -591,9 +592,10 @@ body {
 }
 
 .hotel-link {
-  display: grid;
-  row-gap: 16px;
   grid-column: 1 / -1;
+  display: grid;
+  align-content: space-between;
+  row-gap: 16px;
   text-decoration: none;
   cursor: pointer;
 }
