@@ -92,7 +92,8 @@ body {
 }
 
 .page-header-logo:focus {
-  outline: none;
+  outline: 3px solid #82b3d3;
+  outline-offset: -3px;
 }
 
 .page-header-logo img {
@@ -176,6 +177,11 @@ body {
 .user-navigation-link-search:focus, .user-navigation-link-favorite:focus {
   background-color: rgba(131, 179, 211, 0.2);
   outline: none;
+}
+
+.user-navigation-link-search:active, .user-navigation-link-favorite:active {
+  background-color: #ffffff;
+  opacity: 0.3;
 }
 
 .favorites-counter {
@@ -645,7 +651,7 @@ body {
 }
 
 .buttons-wrapper {
-  width: 191px;
+  width: 192px;
 }
 
 .button-reset {
@@ -766,7 +772,7 @@ body {
 }
 
 .hotel-link:focus {
-  outline: none;
+  outline: 3px solid #82b3d3;
 }
 
 .hotel-link img {
