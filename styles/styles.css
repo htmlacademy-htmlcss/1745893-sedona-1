@@ -66,6 +66,28 @@ body {
   background-color: #756157;
 }
 
+.button:disabled {
+  color: #ffffff;
+  background-color: #e5e5e5;
+}
+
+.button-submit {
+  padding: 8px 50px;
+  background-color: #82b3d3;
+}
+
+.button-submit:hover {
+  background-color: #68a2ca;
+}
+
+.button-submit:focus {
+  background-color: #68a2ca;
+}
+
+.button-submit:active {
+  background-color: #82b3d3;
+}
+
 .page-container {
   display: flex;
   flex-direction: column;
@@ -187,16 +209,20 @@ body {
 .favorites-counter {
   position: absolute;
   top: 11px;
-  right: 4px;
+  left: 20px;
   box-sizing: border-box;
   min-width: 20px;
+  max-width: 40px;
   padding: 5px;
   font-size: 10px;
   line-height: 10px;
   text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   color: #ffffff;
   background-color: #7db54f;
-  border-radius: 50%;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .user-navigation-link.button {
@@ -358,10 +384,10 @@ body {
 }
 
 .advantages-image {
+  display: block;
   max-width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 .advantages-title {
@@ -475,23 +501,6 @@ body {
   border-bottom-left-radius: 4px;
 }
 
-.button-submit {
-  padding: 8px 50px;
-  background-color: #82b3d3;
-}
-
-.button-submit:hover {
-  background-color: #68a2ca;
-}
-
-.button-submit:focus {
-  background-color: #68a2ca;
-}
-
-.button-submit:active {
-  background-color: #82b3d3;
-}
-
 .newsletter .button-submit {
   font-size: 20px;
   line-height: 36px;
@@ -575,15 +584,14 @@ body {
   position: absolute;
   inset: 0;
   margin: auto;
-  margin-left: 0;
 }
 
 .breadcrumbs-link-homepage:hover path, .breadcrumbs-link-homepage:focus path {
-  fill: rgba(255, 255, 255, 0.6);
+  fill-opacity: 0.6;
 }
 
 .breadcrumbs-link-homepage:active path {
-  fill: rgba(255, 255, 255, 0.3);
+  fill-opacity: 0.3;
 }
 
 .catalog-filter-form {
@@ -708,15 +716,15 @@ body {
   border-radius: 4px;
 }
 
-.cards-layout {
+.cards-layout-toggler {
   background-image: url("../images/icons/cards-layout.svg");
 }
 
-.block-layout {
+.block-layout-toggler {
   background-image: url("../images/icons/block-layout.svg");
 }
 
-.list-layout {
+.list-layout-toggler {
   background-image: url("../images/icons/list-layout.svg");
 }
 
@@ -775,7 +783,7 @@ body {
   outline: 3px solid #82b3d3;
 }
 
-.hotel-link img {
+.hotel-image {
   order: -1;
   max-width: 100%;
   height: auto;
@@ -944,7 +952,7 @@ body {
 }
 
 .footer-social-link:active path {
-  fill: rgba(104, 162, 202, 0.3);
+  fill-opacity: 0.3;
 }
 
 .footer-phone {
@@ -984,5 +992,5 @@ body {
 }
 
 .htmlacademy-logo:active path {
-  fill: rgba(117, 97, 87, 0.3);
+  fill-opacity: 0.3;
 }
