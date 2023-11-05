@@ -56,7 +56,7 @@ body {
   background-color: #615048;
 }
 
-.button:focus {
+.button:focus-visible {
   background-color: #615048;
   outline: none;
 }
@@ -80,7 +80,7 @@ body {
   background-color: #68a2ca;
 }
 
-.button-submit:focus {
+.button-submit:focus-visible {
   background-color: #68a2ca;
 }
 
@@ -113,7 +113,7 @@ body {
   margin-right: 28px;
 }
 
-.page-header-logo:focus {
+.page-header-logo:focus-visible {
   outline: 3px solid #82b3d3;
   outline-offset: -3px;
 }
@@ -157,7 +157,7 @@ body {
   color:#756157;
 }
 
-.site-navigation-link:focus {
+.site-navigation-link:focus-visible {
   color:#756157;
   background-color: rgba(131, 179, 211, 0.2);
   outline: none;
@@ -196,12 +196,14 @@ body {
   background: #ffffff url("../images/icons/heart.svg") no-repeat center;
 }
 
-.user-navigation-link-search:focus, .user-navigation-link-favorite:focus {
+.user-navigation-link-search:focus-visible,
+.user-navigation-link-favorite:focus-visible {
   background-color: rgba(131, 179, 211, 0.2);
   outline: none;
 }
 
-.user-navigation-link-search:active, .user-navigation-link-favorite:active {
+.user-navigation-link-search:active,
+.user-navigation-link-favorite:active {
   background-color: #ffffff;
   opacity: 0.3;
 }
@@ -565,7 +567,7 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-link[href]:focus {
+.breadcrumbs-link[href]:focus-visible {
   color: rgba(255, 255, 255, 0.6);
   outline: none;
 }
@@ -586,7 +588,8 @@ body {
   margin: auto;
 }
 
-.breadcrumbs-link-homepage:hover path, .breadcrumbs-link-homepage:focus path {
+.breadcrumbs-link-homepage:hover path,
+.breadcrumbs-link-homepage:focus-visible path {
   fill-opacity: 0.6;
 }
 
@@ -732,7 +735,7 @@ body {
   border-color: #000000;
 }
 
-.layout-toggler:focus {
+.layout-toggler:focus-visible {
   border-color: #68a2ca;
   outline: none;
 }
@@ -779,7 +782,7 @@ body {
   cursor: pointer;
 }
 
-.hotel-link:focus {
+.hotel-link:focus-visible {
   outline: 3px solid #82b3d3;
 }
 
@@ -808,7 +811,8 @@ body {
   background-color: #82b3d3;
 }
 
-.add-favorites:hover, .add-favorites:focus {
+.add-favorites:hover,
+.add-favorites:focus-visible {
   background-color: #68a2ca;
 }
 
@@ -820,7 +824,8 @@ body {
   background-color: #7db54f;
 }
 
-.added-favorites:hover, .added-favorites:focus {
+.added-favorites:hover,
+.added-favorites:focus-visible {
   background-color: #6c9e42;
 }
 
@@ -887,7 +892,7 @@ body {
   box-shadow: inset 0 0 0 1px #82b3d3;
 }
 
-.pagination-link:focus {
+.pagination-link:focus-visible {
   background-color: #68a2ca;
   box-shadow: inset 0 0 0 1px #82b3d3;
   outline: none;
@@ -909,7 +914,8 @@ body {
   background-color: #ffffff;
 }
 
-.pagination-show-more:hover, .pagination-show-more:focus {
+.pagination-show-more:hover,
+.pagination-show-more:focus-visible {
   color: #ffffff;
 }
 
@@ -937,7 +943,7 @@ body {
   height: 40px;
 }
 
-.footer-social-link:focus {
+.footer-social-link:focus-visible {
   outline: none;
 }
 
@@ -947,7 +953,8 @@ body {
   margin: auto;
 }
 
-.footer-social-link:hover path, .footer-social-link:focus path {
+.footer-social-link:hover path,
+.footer-social-link:focus-visible path {
   fill: #68a2ca;
 }
 
@@ -969,7 +976,7 @@ body {
   color: #756157;
 }
 
-.footer-phone:focus {
+.footer-phone:focus-visible {
   color: #756157;
   outline: none;
 }
@@ -983,11 +990,12 @@ body {
   height: 34px;
 }
 
-.htmlacademy-logo:focus {
+.htmlacademy-logo:focus-visible {
   outline: none;
 }
 
-.htmlacademy-logo:hover path, .htmlacademy-logo:focus path {
+.htmlacademy-logo:hover path,
+.htmlacademy-logo:focus-visible path {
   fill: #756157;
 }
 
