@@ -693,8 +693,33 @@ body {
 .sorting-control {
   box-sizing: border-box;
   width: 292px;
+  padding: 12px 18px;
+  padding-right: 40px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  color: inherit;
+  appearance: none;
+  background-image: url("../images/icons/select-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 18px center;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.sorting-control:hover {
+  border-color: #68a2ca;
+}
+
+.sorting-control:focus {
+  border-color: #3f5e72;
+  outline: none;
+}
+
+.sorting-control:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 .layout-control-list {
