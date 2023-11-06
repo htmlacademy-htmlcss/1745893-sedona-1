@@ -600,6 +600,8 @@ body {
 .catalog-filter-form {
   display: flex;
   justify-content: space-between;
+  font-size: 18px;
+  line-height: 23px;
 }
 
 .filter-column {
@@ -625,48 +627,180 @@ body {
   width: 150px;
 }
 
-.catalog-filter-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .catalog-filter-title {
+  margin-bottom: 32px;
   padding: 0;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
 }
 
+.catalog-filter-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .control-label {
-  font-size: 18px;
-  line-height: 23px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+  background-color: #ffffff;
+}
+
+.control-input[type="checkbox"] ~ .control-label::before {
+  background-repeat: no-repeat;
+  background-position: top 6px center;
+  border-radius: 4px;
+}
+
+.control-input[type="checkbox"]:checked ~ .control-label::before {
+  background-image: url("../images/icons/check-mark.svg");
+}
+
+.control-input[type="radio"] ~ .control-label::before {
+  box-sizing: border-box;
+  border: 5px solid #ffffff;
+  border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked ~ .control-label::before {
+  background-color: #3f5e72;
 }
 
 .price-selection-group {
   width: 288px;
-  outline: 1px solid #ffffff;
+}
+
+.price-selection-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2px;
+  margin-bottom: 44px;
 }
 
 .price-selection-label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding: 12px 20px;
+  line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
   background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.price-selection-label:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.price-selection-label:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 .price-selection-input {
+  padding: 0;
   font-family: inherit;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: inherit;
+  line-height: inherit;
   font-weight: 700;
-  background-color: #f2f2f2;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  appearance: textfield;
+}
+
+.price-selection-input::-webkit-outer-spin-button,
+.price-selection-input::-webkit-inner-spin-button {
+  margin: 0;
+  appearance: none;
+}
+
+.price-selection-input:focus {
+  outline: none;
+}
+
+.price-scale {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0 20px;
+  margin-bottom: 8px;
+}
+
+.covered-scale {
+  position: relative;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.price-slider {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.min-price-setting-slider {
+  right: 100%;
+}
+
+.max-price-setting-slider {
+  left: 100%;
 }
 
 .buttons-wrapper {
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
   width: 192px;
 }
 
 .button-reset {
+  padding: 8px 50px;
   background-color: transparent;
+}
+
+.button-reset:hover,
+.button-reset:focus-visible,
+.button-reset:active,
+.button-reset:disabled {
+  background-color: transparent;
+}
+
+.button-reset:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-reset:focus-visible {
+  outline: 3px solid #83b3d3;
+  outline-offset: -3px;
+}
+
+.button-reset:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-reset:disabled {
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .catalog {
@@ -699,13 +833,13 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: inherit;
-  appearance: none;
   background-image: url("../images/icons/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 18px center;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   cursor: pointer;
+  appearance: none;
 }
 
 .sorting-control:hover {
