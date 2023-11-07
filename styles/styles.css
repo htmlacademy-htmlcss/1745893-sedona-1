@@ -600,6 +600,7 @@ body {
 .catalog-filter-form {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   font-size: 18px;
   line-height: 23px;
 }
@@ -653,6 +654,7 @@ body {
 
 .control-label::before {
   content: "";
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   margin-right: 16px;
@@ -739,7 +741,7 @@ body {
   margin-bottom: 8px;
 }
 
-.covered-scale {
+.available-coverage-scale {
   position: relative;
   height: 4px;
   background-color: #ffffff;
@@ -747,23 +749,22 @@ body {
 
 .price-slider {
   position: absolute;
-  top: 50%;
+  top: -8px;
   width: 20px;
   height: 20px;
   padding: 0;
   border: none;
   border-radius: 5px;
   background-color: #ffffff;
-  transform: translateY(-50%);
   cursor: pointer;
 }
 
 .min-price-setting-slider {
-  right: 100%;
+  left: -20px;
 }
 
 .max-price-setting-slider {
-  left: 100%;
+  right: -20px;
 }
 
 .buttons-wrapper {
