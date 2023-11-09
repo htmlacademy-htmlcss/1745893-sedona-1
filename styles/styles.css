@@ -523,7 +523,7 @@ body {
 .modal {
   position: relative;
   margin: auto;
-  margin-top: 400px;
+  /* margin-top: 400px; */
   padding: 64px 70px;
   background-color: #ffffff;
   border-radius: 30px;
@@ -547,6 +547,24 @@ body {
   cursor: pointer;
 }
 
+.modal-close-button svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+}
+
+.modal-close-button:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close-button:focus-visible {
+  outline: 3px solid #83b3d3;
+}
+
+.modal-close-button:active path {
+  fill-opacity: 0.3;
+}
+
 .modal-title {
   max-width: 500px;
   margin: 0;
@@ -557,13 +575,7 @@ body {
   color: #000000;
 }
 
-.modal-close-button svg {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-}
-
-.modal-form .button[type="submit"] {
+.modal-form-submit {
   padding: 18px 77px;
   font-size: 20px;
   line-height: 24px;
