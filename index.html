@@ -168,39 +168,39 @@
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
             <label class="modal-label" for="arrival-date">Дата заезда:</label>
-            <input class="date-selection" type="text" name="arrival-date" value="27 апреля 2020" id="arrival-date" required>
-            <p class="date-comment arrival-date-comment date-selection-error">Мы не можем отправить вас в прошлое.</p>
+            <input class="date-input" type="text" name="arrival-date" value="27 апреля 2020" id="arrival-date" required>
+            <p class="date-comment arrival-date-comment text-error">Мы не можем отправить вас в прошлое.</p>
             <label class="modal-label" for="departure-date">Дата выезда:</label>
-            <input class="date-selection" type="text" name="departure-date" value="1 сентября 2023" id="departure-date" required>
+            <input class="date-input" type="text" name="departure-date" value="1 сентября 2023" id="departure-date" required>
             <p class="date-comment departure-date-comment">На эти даты есть свободные номера. Пока есть.</p>
             <label class="modal-label" for="adults-entering-number">
               <span class="visually-hidden">Выберите число въезжающих:</span>
               Взрослые:
             </label>
-            <p class="number-field-wrapper">
+            <p class="number-controls-wrapper">
               <button class="number-setting number-entering-decrement" type="button">
                 <span class="visually-hidden">Уменьшить число.</span>
               </button>
-                <input class="number-entering-selection" type="number" name="adults-entering-number" min="1" step="1" value="2" id="adults-entering-number">
+              <input class="number-entering-input" type="number" name="adults-entering-number" min="1" step="1" value="2" id="adults-entering-number">
               <button class="number-setting number-entering-increment" type="button">
                 <span class="visually-hidden">Увеличить число.</span>
               </button>
             </p>
             <p class="modal-label-wrapper">
-              <label class="modal-label" for="children-number">
+              <label class="modal-label" for="children-entering-number">
                 <span class="visually-hidden">Выберите число въезжающих:</span>
                 Дети:
               </label>
               <span class="tooltip">
                 <button class="tooltip-switcher" type="button" aria-labelledby="placing-children-tooltip"></button>
-                <span class="tooltip-text" role="tooltip" id="placing-children-tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.Дети до 6 лет размещаются бесплатно.</span>
+                <span class="tooltip-text" role="tooltip" id="placing-children-tooltip">Укажите количество детей, которые будут с  вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
               </span>
             </p>
-            <p class="number-field-wrapper">
+            <p class="number-controls-wrapper">
               <button class="number-setting number-entering-decrement" type="button">
                 <span class="visually-hidden">Уменьшить число.</span>
               </button>
-              <input class="number-entering-selection" type="number" name="children-entering-number" min="0" step="1" value="2" id="children-number">
+              <input class="number-entering-input" type="number" name="children-entering-number" min="0" step="1" value="2" id="children-entering-number">
               <button class="number-setting number-entering-increment" type="button">
                 <span class="visually-hidden">Увеличить число.</span>
               </button>

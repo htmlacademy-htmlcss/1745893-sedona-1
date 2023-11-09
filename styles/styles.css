@@ -464,8 +464,8 @@ body {
   color: #ffffff;
   background-color: #82b3d3;
   background-image: url("../images/covering-bg/newsletter-bg.jpg");
-  background-size: 100% auto;
   background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .newsletter-title {
@@ -520,6 +520,10 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+.modal-container-close {
+  display: none;
+}
+
 .modal {
   position: relative;
   margin: auto;
@@ -565,6 +569,12 @@ body {
   fill-opacity: 0.3;
 }
 
+.modal-content {
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
 .modal-title {
   max-width: 500px;
   margin: 0;
@@ -572,7 +582,55 @@ body {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
-  color: #000000;
+}
+
+.modal-label {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.date-input, .number-entering-input {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  color: inherit;
+  border: none;
+  background-color: #f2f2f2;
+}
+
+.date-input {
+  padding: 12px 20px;
+  padding-right: 50px;
+  line-height: inherit;
+  background-image: url("../images/icons/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+  border-radius: 4px;
+}
+
+.date-comment {
+  font-size: 16px;
+  line-height: 21px;
+  color: #333333;
+}
+
+.text-error {
+  color: #ff5757;
+}
+
+.number-controls-wrapper {
+  border-radius: 4px;
+}
+
+.number-entering-input {
+  line-height: 20px;
+  text-align: center;
+}
+
+.tooltip-text {
+  color: #ffffff;
+  background-color: #333333;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
 }
 
 .modal-form-submit {
