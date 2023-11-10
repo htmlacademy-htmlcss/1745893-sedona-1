@@ -167,28 +167,28 @@
         <section class="modal-content">
           <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
           <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="field-group">
+            <div class="modal-field-group">
               <label class="modal-label" for="arrival-date">Дата заезда:</label>
-              <input class="date-input" type="text" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" id="arrival-date" required>
-              <p class="date-comment arrival-date-comment text-error">Мы не можем отправить вас в прошлое.</p>
+              <input class="date-input" type="text" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" id="arrival-date" autocomplete="off" required>
+              <p class="date-comment-text arrival-date-comment-text text-error">Мы не можем отправить вас в прошлое.</p>
             </div>
-            <div class="field-group">
+            <div class="modal-field-group">
               <label class="modal-label" for="departure-date">Дата выезда:</label>
-              <input class="date-input" type="text" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату" id="departure-date" required>
-              <p class="date-comment departure-date-comment">На эти даты есть свободные номера. Пока есть.</p>
+              <input class="date-input" type="text" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату" id="departure-date" autocomplete="off" required>
+              <p class="date-comment-text departure-date-comment-text">На эти даты есть свободные номера. Пока есть.</p>
             </div>
-            <div class="field-group number-entering-fields">
+            <div class="modal-field-group number-entering-fields">
               <label class="modal-label" for="adults-entering-number">
                 <span class="visually-hidden">Выберите число въезжающих:</span>
                 Взрослые:
               </label>
               <p class="number-controls-wrapper">
-                <button class="number-setting-button number-decrement" type="button">
+                <button class="number-change-button number-decrement" type="button">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/></svg>
                   <span class="visually-hidden">Уменьшить число.</span>
                 </button>
-                <input class="number-entering-input" type="number" name="adults-entering-number" min="1" step="1" value="2" placeholder="1" id="adults-entering-number" required>
-                <button class="number-setting-button number-increment" type="button">
+                <input class="number-entering-input" type="number" name="adults-entering-number" min="1" step="1" value="2" id="adults-entering-number" required>
+                <button class="number-change-button number-increment" type="button">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/></svg>
                   <span class="visually-hidden">Увеличить число.</span>
                 </button>
@@ -204,18 +204,18 @@
                 </span>
               </p>
               <p class="number-controls-wrapper">
-                <button class="number-setting-button number-decrement" type="button">
+                <button class="number-change-button number-decrement" type="button">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M3 9V11H17V9H3Z" fill="#756157" fill-opacity="0.3"/></svg>
                   <span class="visually-hidden">Уменьшить число.</span>
                 </button>
-                <input class="number-entering-input" type="number" name="children-entering-number" min="0" step="1" value="2" placeholder="1" id="children-entering-number" required>
-                <button class="number-setting-button number-increment" type="button">
+                <input class="number-entering-input" type="number" name="children-entering-number" min="0" step="1" value="2" id="children-entering-number" required>
+                <button class="number-change-button number-increment" type="button">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="#756157" fill-opacity="0.3"/></svg>
                   <span class="visually-hidden">Увеличить число.</span>
                 </button>
               </p>
             </div>
-            <button class="button button-submit modal-form-submit" type="submit">Найти</button>
+            <button class="button modal-form-submit" type="submit">Найти</button>
           </form>
         </section>
       </div>
