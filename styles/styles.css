@@ -581,13 +581,26 @@ body {
   text-transform: uppercase;
 }
 
+.field-group {
+  display: grid;
+  grid-template-columns: 125px 1fr;
+  align-items: center;
+  column-gap: 10px;
+  margin-bottom: 23px;
+}
+
+.number-entering-fields {
+  grid-template-columns: repeat(2, 125px 1fr);
+}
+
 .modal-label {
   font-weight: 700;
   text-transform: capitalize;
   cursor: pointer;
 }
 
-.date-input, .number-entering-input {
+.date-input,
+.number-entering-input {
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
@@ -596,7 +609,29 @@ body {
   background-color: #f2f2f2;
 }
 
+.date-input:hover,
+.number-entering-input:hover {
+  background-color: #e6e6e6;
+}
+
+.date-input:placeholder-shown:focus-visible,
+.number-entering-input:placeholder-shown:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.date-input:focus-visible,
+.number-entering-input:focus-visible {
+  background-color: #f2f2f2;
+  outline: 2px solid #000000;
+}
+
+.number-entering-input {
+  outline-offset: -3px;
+}
+
 .date-input {
+  grid-column: 2 / 3;
   padding: 12px 20px;
   padding-right: 50px;
   line-height: inherit;
@@ -606,7 +641,13 @@ body {
   border-radius: 4px;
 }
 
+.date-input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .date-comment {
+  grid-column: 2 / 3;
+  margin: 0 20px;
   font-size: 16px;
   line-height: 21px;
   color: #333333;
@@ -618,10 +659,13 @@ body {
 
 .number-controls-wrapper {
   display: flex;
+  margin: 0;
 }
 
 .number-entering-input {
-  padding: 14px 10px;
+  box-sizing: border-box;
+  width: 30px;
+  padding: 14px 5px;
   line-height: 20px;
   text-align: center;
   appearance: textfield;
@@ -643,13 +687,6 @@ body {
   cursor: pointer;
 }
 
-.number-setting-button svg {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  border-radius: 4px;
-}
-
 .number-decrement {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -658,6 +695,13 @@ body {
 .number-increment {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+.number-setting-button svg {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 4px;
 }
 
 .number-setting-button:hover path,
@@ -679,10 +723,12 @@ body {
   fill-opacity: 0.2;
 }
 
-.modal-label-wrapper {
+.tooltip-group-wrapper {
+  justify-self: end;
   display: flex;
   align-items: center;
   gap: 10px;
+  margin: 0;
 }
 
 .tooltip {
@@ -747,7 +793,14 @@ body {
   display: block;
 }
 
+.tooltip-group-wrapper + .number-controls-wrapper {
+  justify-self: end;
+}
+
 .modal-form-submit {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 25px;
   padding: 18px 77px;
   font-size: 20px;
   line-height: 24px;
@@ -924,6 +977,18 @@ body {
 
 .control-input[type="radio"]:checked ~ .control-label::before {
   background-color: #3f5e72;
+}
+
+.control-label:hover::before {
+  opacity: 0.6;
+}
+
+.control-label:focus-visible {
+  outline: none;
+}
+
+.control-label:focus-visible::before {
+  outline: 3px solid #83b3d3;
 }
 
 .price-selection-group {
