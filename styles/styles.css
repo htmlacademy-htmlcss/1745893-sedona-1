@@ -628,6 +628,7 @@ body {
 .number-entering-input {
   font-family: inherit;
   font-size: 18px;
+  line-height: inherit;
   font-weight: 700;
   color: inherit;
   border: none;
@@ -638,7 +639,6 @@ body {
   grid-column: 2 / 3;
   padding: 12px 20px;
   padding-right: 50px;
-  line-height: inherit;
   background-image: url("../images/icons/calendar.svg");
   background-repeat: no-repeat;
   background-position: right 22px center;
@@ -690,8 +690,7 @@ body {
 .number-entering-input {
   box-sizing: border-box;
   width: 30px;
-  padding: 14px 5px;
-  line-height: 20px;
+  padding: 12px 5px;
   text-align: center;
   outline-offset: -2px;
   appearance: textfield;
@@ -1041,7 +1040,6 @@ body {
 
 .price-selection-label {
   display: flex;
-  flex-direction: row-reverse;
   justify-content: space-between;
   padding: 12px 20px;
   line-height: 24px;
@@ -1073,7 +1071,15 @@ body {
   outline: 2px solid #ff5757;
 }
 
+@supports not selector(:has()) {
+  .price-selection-input:invalid {
+    outline: 2px solid #ff5757;
+  }
+}
+
 .price-selection-input {
+  width: 70px;
+  order: -1;
   padding: 0;
   font-family: inherit;
   font-size: inherit;
