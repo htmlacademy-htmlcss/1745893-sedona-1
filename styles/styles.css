@@ -66,9 +66,10 @@ body {
   background-color: #756157;
 }
 
-.button:disabled {
+button.button:disabled {
   color: #ffffff;
   background-color: #e5e5e5;
+  cursor: default;
 }
 
 .button-submit {
@@ -239,7 +240,7 @@ body {
   padding-bottom: 82px;
   background-color: #298b4a;
   background-image: url("../images/covering-bg/hero-decoration-border.svg"), url("../images/covering-bg/hero-bg.jpg");
-  background-position: bottom, center;
+  background-position: center bottom -1px, center;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -520,10 +521,12 @@ body {
 
 .newsletter input:disabled {
   color: rgba(0, 0, 0, 0.3);
+  background-color: #f2f2f2;
+  cursor: default;
 }
 
-.newsletter input:disabled:hover {
-  background-color: #f2f2f2;
+.number-entering-input:disabled::placeholder {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .newsletter .button-submit {
@@ -614,7 +617,7 @@ body {
   margin-bottom: 23px;
 }
 
-.number-entering-fields {
+.number-entering-group {
   grid-template-columns: repeat(2, 125px 1fr);
 }
 
@@ -670,6 +673,17 @@ body {
   outline: 2px solid #ff5757;
 }
 
+.date-input:disabled,
+.number-entering-input:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: #f2f2f2;
+  cursor: default;
+}
+
+.date-input:disabled::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .date-comment-text {
   grid-column: 2 / 3;
   margin: 0 20px;
@@ -682,7 +696,7 @@ body {
   color: #ff5757;
 }
 
-.number-controls-wrapper {
+.number-controls-group {
   display: flex;
   margin: 0;
 }
@@ -748,7 +762,17 @@ body {
   fill-opacity: 0.2;
 }
 
-.tooltip-group-wrapper {
+.number-change-button:disabled {
+  background-color: #f2f2f2;
+  cursor: default;
+}
+
+.number-change-button:disabled path {
+  fill: #000000;
+  fill-opacity: 0.3;
+}
+
+.tooltip-group {
   justify-self: end;
   display: flex;
   align-items: center;
@@ -784,6 +808,16 @@ body {
   outline: none;
 }
 
+.tooltip-switcher:active {
+  opacity: 0.3;
+}
+
+.tooltip-switcher:disabled {
+  background-color: #f2f2f2;
+  opacity: 1;
+  cursor: default;
+}
+
 .tooltip-text {
   display: none;
   position: absolute;
@@ -805,7 +839,7 @@ body {
 .tooltip-text::after {
   content: "";
   position: absolute;
-  bottom: 100%;
+  bottom: calc(100% - 1px);
   left: 50%;
   width: 19px;
   height: 9px;
@@ -818,7 +852,11 @@ body {
   display: block;
 }
 
-.tooltip-group-wrapper + .number-controls-wrapper {
+.tooltip-switcher:disabled + .tooltip-text {
+  display: none;
+}
+
+.tooltip-group + .number-controls-group {
   justify-self: end;
 }
 
@@ -1027,6 +1065,11 @@ body {
   opacity: 0.3;
 }
 
+.control-input:disabled ~ .control-label {
+  opacity: 0.3;
+  cursor: default;
+}
+
 .price-selection-group {
   width: 288px;
 }
@@ -1071,10 +1114,15 @@ body {
   outline: 2px solid #ff5757;
 }
 
-@supports not selector(:has()) {
+@supports not selector(.price-selection-label:has(.price-selection-input:invalid)) {
   .price-selection-input:invalid {
     outline: 2px solid #ff5757;
   }
+}
+
+.price-selection-label:has(.price-selection-input:disabled) {
+  background-color: #f2f2f2;
+  cursor: default;
 }
 
 .price-selection-input {
@@ -1098,6 +1146,11 @@ body {
 
 .price-selection-input:focus {
   outline: none;
+}
+
+.price-selection-input:disabled {
+  color: rgba(0, 0, 0, 0.3);
+  cursor: default;
 }
 
 .price-scale {
@@ -1138,6 +1191,11 @@ body {
 
 .price-slider:active {
   cursor: grabbing;
+}
+
+.price-slider:disabled {
+  background-color: #f2f2f2;
+  cursor: default;
 }
 
 .buttons-wrapper {
