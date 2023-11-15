@@ -1010,7 +1010,6 @@ button.button:disabled {
 }
 
 .catalog-filter-item {
-  display: flex;
   margin-bottom: 16px;
 }
 
@@ -1019,7 +1018,7 @@ button.button:disabled {
 }
 
 .control-label {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   cursor: pointer;
 }
@@ -1285,6 +1284,7 @@ button.button:disabled {
 
 .sorting-control:disabled {
   color: rgba(0, 0, 0, 0.3);
+  background-image: url("../images/icons/select-arrow-disabled.svg");
   border-color: rgba(0, 0, 0, 0.3);
 }
 
