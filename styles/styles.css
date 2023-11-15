@@ -241,7 +241,7 @@ button.button:disabled {
   padding-bottom: 82px;
   background-color: #298b4a;
   background-image: url("../images/covering-bg/hero-decoration-border.svg"), url("../images/covering-bg/hero-bg.jpg");
-  background-position: center bottom -1px, center;
+  background-position: bottom, center;
   background-size: 100% auto;
   background-repeat: no-repeat;
 }
@@ -491,7 +491,7 @@ button.button:disabled {
 }
 
 .newsletter input {
-  padding: 12px 20px;
+  padding: 14px 20px;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
@@ -902,7 +902,7 @@ button.button:disabled {
 .breadcrumbs-list {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 28px;
+  row-gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1006,6 +1006,7 @@ button.button:disabled {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  text-transform: capitalize;
 }
 
 .catalog-filter-list {
@@ -1015,6 +1016,7 @@ button.button:disabled {
 }
 
 .catalog-filter-item {
+  display: flex;
   margin-bottom: 16px;
 }
 
@@ -1023,7 +1025,7 @@ button.button:disabled {
 }
 
 .control-label {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   cursor: pointer;
 }
@@ -1460,6 +1462,7 @@ button.button:disabled {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0;
   padding: 0;
@@ -1561,7 +1564,7 @@ button.button:disabled {
 .footer-phone {
   max-width: 340px;
   font-size: 40px;
-  line-height: 40px;
+  line-height: 50px;
   text-align: center;
   color: #000000;
   text-transform: uppercase;
