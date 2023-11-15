@@ -102,6 +102,7 @@ button.button:disabled {
 
 .navigation {
   display: flex;
+  align-items: flex-start;
 }
 
 .page-header-logo {
@@ -901,7 +902,7 @@ button.button:disabled {
 .breadcrumbs-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 28px;
+  row-gap: 28px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -911,6 +912,10 @@ button.button:disabled {
 
 .breadcrumbs-item {
   position: relative;
+}
+
+.breadcrumbs-item + .breadcrumbs-item {
+  margin-left: 28px;
 }
 
 .breadcrumbs-item + .breadcrumbs-item::before {
