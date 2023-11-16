@@ -184,14 +184,20 @@ button.button:disabled {
 .user-navigation-link-search {
   width: 44px;
   height: 64px;
-  background: #ffffff url("../images/icons/search.svg") no-repeat center;
+  background-color: #ffffff;
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .user-navigation-link-favorite {
   position: relative;
   width: 44px;
   height: 64px;
-  background: #ffffff url("../images/icons/heart.svg") no-repeat center;
+  background-color: #ffffff;
+  background-image: url("../images/icons/heart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .user-navigation-link-search:focus-visible,
@@ -556,7 +562,7 @@ button.button:disabled {
 }
 
 .modal-search {
-  width: 580px;
+  width: 576px;
 }
 
 .modal-close-button {
@@ -683,6 +689,7 @@ button.button:disabled {
 .date-comment-text {
   grid-column: 2 / 3;
   margin: 0 20px;
+  margin-top: 4px;
   font-size: 16px;
   line-height: 21px;
   color: #333333;
@@ -815,14 +822,15 @@ button.button:disabled {
 }
 
 .tooltip-text {
-  display: none;
   position: absolute;
   z-index: 1;
   top: calc(100% + 15px);
   left: 50%;
+  display: none;
   box-sizing: border-box;
   width: 256px;
-  padding: 22px 20px;
+  padding: 22px;
+  padding-top: 20px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
@@ -1011,7 +1019,6 @@ button.button:disabled {
 }
 
 .catalog-filter-item {
-  display: flex;
   margin-bottom: 16px;
 }
 
@@ -1022,6 +1029,7 @@ button.button:disabled {
 .control-label {
   display: flex;
   align-items: center;
+  width: fit-content;
   cursor: pointer;
 }
 
@@ -1084,6 +1092,7 @@ button.button:disabled {
 
 .price-selection-label {
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
   padding: 12px 20px;
   line-height: 24px;
@@ -1127,8 +1136,9 @@ button.button:disabled {
 }
 
 .price-selection-input {
-  width: 70px;
+  align-self: flex-start;
   order: -1;
+  width: 60px;
   padding: 0;
   font-family: inherit;
   font-size: inherit;
@@ -1155,9 +1165,9 @@ button.button:disabled {
 }
 
 .price-scale {
-  background-color: rgba(255, 255, 255, 0.3);
   padding: 0 20px;
   margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .available-coverage-scale {
