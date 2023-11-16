@@ -134,7 +134,6 @@ button.button:disabled {
 }
 
 .user-navigation {
-  align-items: center;
   max-width: 320px;
   margin-left: auto;
 }
@@ -227,6 +226,7 @@ button.button:disabled {
 }
 
 .user-navigation-link.button {
+  margin: 14px 0;
   margin-left: 20px;
   padding: 8px 34px;
 }
@@ -264,7 +264,6 @@ button.button:disabled {
 }
 
 .services-slogan-content {
-  width: 506px;
   margin-bottom: 64px;
 }
 
@@ -287,8 +286,8 @@ button.button:disabled {
 }
 
 .advantages-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
   margin-bottom: 64px;
   padding: 0;
@@ -300,10 +299,11 @@ button.button:disabled {
 }
 
 .advantages-item {
-  box-sizing: border-box;
-  width: 400px;
+  display: grid;
+  align-items: center;
   min-height: 385px;
   background-color: rgba(131, 179, 211, 0.12);
+  text-align: center;
 }
 
 .advantages-item:nth-child(odd) {
@@ -315,23 +315,10 @@ button.button:disabled {
 }
 
 .advantages-item.advantages-item-illustrated {
-  display: flex;
-  align-items: center;
-  width: 100%;
+  grid-column: 1 / 4;
+  grid-template-columns: repeat(3, 1fr);
   color: #ffffff;
   background-color: #82b3d3;
-}
-
-.flow-reverse {
-  flex-direction: row-reverse;
-}
-
-.services-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  padding: 80px;
 }
 
 .advantages-text-wrapper {
@@ -339,13 +326,21 @@ button.button:disabled {
   flex-direction: column;
   align-items: center;
   row-gap: 30px;
-  box-sizing: border-box;
-  width: 400px;
-  padding: 112px 80px;
+  padding: 112px 85px;
 }
 
 .advantages-item-illustrated .advantages-text-wrapper {
-  padding: 102px 80px;
+  padding-top: 102px;
+  padding-bottom: 102px;
+}
+
+.services-item .advantages-text-wrapper {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.flow-reverse .advantages-text-wrapper{
+  order: 1;
 }
 
 .advantages-text-wrapper::before {
@@ -359,29 +354,30 @@ button.button:disabled {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.services-item::before {
-  content: "";
+.services-item .advantages-text-wrapper::before {
   width: 75px;
   height: 72px;
+  background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
 
-.housing::before {
+.housing .advantages-text-wrapper::before {
   background-image: url("../images/icons/services-housing.svg");
 }
 
-.food::before {
+.food .advantages-text-wrapper::before {
   background-image: url("../images/icons/services-food.svg");
 }
 
-.souvenirs::before {
+.souvenirs .advantages-text-wrapper::before {
   background-image: url("../images/icons/services-souvenirs.svg");
 }
 
 .advantages-image-wrapper {
-  width: 800px;
+  grid-column: span 2;
+  align-self: stretch;
 }
 
 .advantages-image {
@@ -393,7 +389,6 @@ button.button:disabled {
 
 .advantages-title {
   order: -1;
-  width: 175px;
   margin: 0;
   font-size: 24px;
   line-height: 28px;
@@ -1367,8 +1362,8 @@ button.button:disabled {
   padding: 20px;
   font-size: 18px;
   line-height: 21px;
-  border: 1px solid #e6e6e6;
   border-radius: 4px;
+  box-shadow: 0 0 0 1px #e6e6e6;
 }
 
 .hotel-link {
@@ -1431,16 +1426,6 @@ button.button:disabled {
   background-color: #7db54f;
 }
 
-.rating-assessment {
-  padding: 8px;
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  text-transform: uppercase;
-  background-color: #f2f2f2;
-  border-radius: 4px;
-}
-
 .stars-number {
   min-height: 36px;
   background-image: url("../images/icons/star.svg");
@@ -1458,6 +1443,15 @@ button.button:disabled {
 
 .four-stars {
   width: 90px;
+}
+
+.rating-assessment {
+  padding: 8px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border-radius: 4px;
 }
 
 .pagination {
@@ -1529,7 +1523,7 @@ button.button:disabled {
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
-  max-width: 240px;
+  width: 240px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1584,9 +1578,16 @@ button.button:disabled {
   color: rgba(117, 97, 87, 0.3);
 }
 
+.htmlacademy-logo-container {
+  width: 211px;
+  margin: 0;
+}
+
 .htmlacademy-logo {
+  display: block;
   width: 115px;
   height: 34px;
+  margin-left: auto;
 }
 
 .htmlacademy-logo:focus-visible {
