@@ -31,7 +31,8 @@ body {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -710,13 +711,15 @@ button.button:disabled {
   padding: 12px 5px;
   text-align: center;
   outline-offset: -2px;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .number-entering-input::-webkit-outer-spin-button,
 .number-entering-input::-webkit-inner-spin-button {
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .number-change-button {
@@ -1147,13 +1150,15 @@ button.button:disabled {
   font-weight: 700;
   border: none;
   background-color: transparent;
-  appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
 }
 
 .price-selection-input::-webkit-outer-spin-button,
 .price-selection-input::-webkit-inner-spin-button {
   margin: 0;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .price-selection-input:focus {
@@ -1283,7 +1288,8 @@ button.button:disabled {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   cursor: pointer;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
 }
 
 .sorting-control:hover {
