@@ -248,7 +248,7 @@ button.button:disabled {
   background-color: #298b4a;
   background-image: url("../images/covering-bg/hero-decoration-border.svg"), url("../images/covering-bg/hero-bg.jpg");
   background-position: bottom, center;
-  background-size: 100% auto;
+  background-size: 100% auto, cover;
   background-repeat: no-repeat;
 }
 
@@ -465,7 +465,7 @@ button.button:disabled {
   background-color: #82b3d3;
   background-image: url("../images/covering-bg/newsletter-bg.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: cover;
 }
 
 .newsletter-title {
@@ -778,6 +778,7 @@ button.button:disabled {
 .tooltip-group {
   justify-self: end;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 10px;
   margin: 0;
@@ -1477,7 +1478,7 @@ button.button:disabled {
   display: block;
   box-sizing: border-box;
   min-width: 60px;
-  height: 60px;
+  min-height: 60px;
   padding: 12px 18px;
   font-size: 20px;
   line-height: 36px;
