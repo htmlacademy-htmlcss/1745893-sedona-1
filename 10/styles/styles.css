@@ -465,7 +465,7 @@ button.button:disabled {
 
 .newsletter-index {
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #298b4a;
   background-image: url("../images/covering-bg/newsletter-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -891,7 +891,7 @@ button.button:disabled {
   padding: 70px;
   padding-top: 35px;
   color: #ffffff;
-  background-color: #82b3d3;
+  background-color: #298b4a;
   background-image: url("../images/covering-bg/catalog-main-top-container-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -1284,6 +1284,7 @@ button.button:disabled {
   font-size: 18px;
   line-height: 21px;
   color: inherit;
+  background-color: #ffffff;
   background-image: url("../images/icons/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 18px center;
