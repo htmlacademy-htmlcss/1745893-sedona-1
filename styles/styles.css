@@ -120,6 +120,8 @@ button.button:disabled {
 
 .page-header-logo img {
   position: absolute;
+  max-width: 100%;
+  height: auto;
 }
 
 .navigation-list {
